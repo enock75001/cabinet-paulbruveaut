@@ -78,7 +78,7 @@ export default function AboutPage() {
              </div>
              <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3">
                 {values.map(value => (
-                    <div key={value.title} className="text-center p-6">
+                    <div key={value.title} className="text-center p-6 transition-all duration-300 hover:bg-background/50 hover:shadow-lg rounded-lg">
                         {value.icon}
                         <h3 className="font-headline text-xl font-semibold text-primary mt-5">{value.title}</h3>
                         <p className="mt-2 text-muted-foreground">{value.description}</p>

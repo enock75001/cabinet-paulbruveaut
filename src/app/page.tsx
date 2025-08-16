@@ -110,7 +110,7 @@ export default function Home() {
           </div>
           <div className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-3">
             {testimonials.slice(0, 3).map((testimonial) => (
-              <Card key={testimonial.name} className="flex flex-col bg-background/50 border-transparent">
+              <Card key={testimonial.name} className="flex flex-col bg-background/50 border-transparent transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-2">
                 <CardHeader className="flex-row items-center gap-4 pb-4">
                   <Avatar>
                     <AvatarImage src={`https://placehold.co/40x40.png?text=${testimonial.avatar}`} />
