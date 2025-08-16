@@ -49,7 +49,7 @@ const Navbar: React.FC = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-primary-700/20 rounded-xl blur opacity-75 group-hover:opacity-100 transition-opacity"></div>
                 <div className="relative bg-white/10 backdrop-blur-sm p-2 rounded-xl border border-white/20 group-hover:border-primary-300/50 transition-all duration-300">
                   <img 
-                    src="https://ai-lumi-prd.oss-us-east-1.aliyuncs.com/ee/ee096ad1415a6acf47518db7a215603c.png"
+                    src="https://ai-lumi-prd.oss-us-east-1.aliyuncs.com/d3/d3547f40259c0df34bb923384d4dc893.png"
                     alt="Cabinet Maître Paul Bruveaut"
                     className="h-12 w-auto object-contain filter drop-shadow-sm group-hover:drop-shadow-md transition-all duration-300"
                   />
@@ -176,7 +176,7 @@ const Navbar: React.FC = () => {
                 {/* Logo mobile dans le menu */}
                 <div className="flex justify-center py-4 border-b border-neutral-200/50">
                   <img 
-                    src="https://ai-lumi-prd.oss-us-east-1.aliyuncs.com/ee/ee096ad1415a6acf47518db7a215603c.png"
+                    src="https://ai-lumi-prd.oss-us-east-1.aliyuncs.com/d3/d3547f40259c0df34bb923384d4dc893.png"
                     alt="Cabinet Maître Paul Bruveaut"
                     className="h-10 w-auto object-contain filter drop-shadow-sm"
                   />
@@ -247,3 +247,5 @@ const Navbar: React.FC = () => {
 }
 
 export default Navbar
+
+    
