@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Scale, Users, Briefcase, BotMessageSquare, ChevronRight, Star } from "lucide-react";
+import { Scale, Users, Briefcase, ChevronRight, Star } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -119,19 +119,6 @@ export default function Home() {
               />
             </div>
           </div>
-        </div>
-      </section>
-
-      <section id="timeline-estimator" className="bg-gradient-to-r from-primary to-yellow-400 text-primary-foreground py-20 sm:py-24">
-        <div className="container mx-auto px-4 text-center">
-          <BotMessageSquare className="mx-auto h-12 w-12" />
-          <h2 className="font-headline mt-4 text-3xl font-bold sm:text-4xl">Estimez la durée de votre démarche</h2>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-primary-foreground/80">
-            Utilisez notre outil d'estimation basé sur l'IA pour obtenir une première idée du calendrier de vos formalités notariales.
-          </p>
-          <Button asChild variant="secondary" size="lg" className="mt-8 bg-background text-foreground hover:bg-background/90">
-            <Link href="/timeline-estimator">Lancer l'estimation</Link>
-          </Button>
         </div>
       </section>
       

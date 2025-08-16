@@ -13,7 +13,6 @@ const navLinks = [
   { href: "/", label: "Accueil" },
   { href: "/services", label: "Services" },
   { href: "/about", label: "À Propos" },
-  { href: "/timeline-estimator", label: "Estimation" },
   { href: "/contact", label: "Contact" },
 ];
 
