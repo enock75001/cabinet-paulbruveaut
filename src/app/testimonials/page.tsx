@@ -21,7 +21,7 @@ export default function TestimonialsPage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {testimonials.map((testimonial) => (
-              <Card key={testimonial.name} className="flex flex-col border bg-card transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+              <Card key={testimonial.name} className="flex flex-col border bg-card transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
                  <CardContent className="flex-grow p-6">
                    <div className="flex gap-1 mb-4">
                     {[...Array(5)].map((_, i) => <Star key={i} className="h-4 w-4 text-yellow-400 fill-yellow-400" />)}

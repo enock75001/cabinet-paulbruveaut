@@ -79,7 +79,7 @@ export default function ServicesPage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:gap-12">
             {servicesList.map((service) => (
-              <Card key={service.title} className="flex flex-col overflow-hidden bg-card border transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+              <Card key={service.title} className="flex flex-col overflow-hidden bg-card border transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
                 <CardHeader className="p-6">
                     <div className="flex items-center gap-4">
                         <div className="flex h-16 w-16 items-center justify-center rounded-lg bg-primary text-primary-foreground">

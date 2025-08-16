@@ -1,80 +1,59 @@
-import Link from "next/link";
-import { Mail, Phone, MapPin } from "lucide-react";
-import { Logo } from "./Logo";
 
-const navLinks = [
-    { href: "/services", label: "Services" },
-    { href: "/about", label: "À Propos" },
-    { href: "/testimonials", label: "Témoignages"},
-    { href: "/contact", label: "Contact" },
-  ];
+'use client'
+
+import React from 'react'
+import Link from 'next/link'
+import { MapPin, Phone, Mail, Clock } from 'lucide-react'
 
 export function Footer() {
   return (
-    <footer className="bg-secondary/50 border-t">
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-3">
-          <div className="space-y-4">
-            <Logo />
-            <p className="max-w-xs text-sm text-muted-foreground">
-              Votre partenaire de confiance pour des solutions juridiques sécurisées et sur-mesure.
-            </p>
-            <p className="text-sm text-muted-foreground">
+    <footer className="bg-secondary text-secondary-foreground">
+      <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
+          <div className="md:col-span-2">
+            <h3 className="font-headline text-2xl font-semibold text-primary">
+              Maître Paul Bruveau, Notaire
+            </h3>
+            <p className="mt-4 text-muted-foreground">
+              89 Boulevard Saint-Michel, 75005 Paris
+              <br />
               En collaboration avec Maître COUZIGOU-SUHAS Nathalie.
             </p>
+             <div className="mt-6 space-y-2 text-sm">
+                <a href="tel:+33644684247" className="flex items-center gap-2 hover:text-primary">
+                  <Phone className="h-4 w-4" /> +33 6 44 68 42 47
+                </a>
+                <a href="mailto:contact@cabinet-paulbruveaut.site" className="flex items-center gap-2 hover:text-primary">
+                  <Mail className="h-4 w-4" /> contact@cabinet-paulbruveaut.site
+                </a>
+            </div>
           </div>
-          
-          <div className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:col-span-2">
-            <div className="space-y-4">
-              <h4 className="font-headline font-semibold text-foreground">Navigation</h4>
-              <ul className="space-y-2">
-                {navLinks.map(link => (
-                    <li key={link.href}>
-                        <Link href={link.href} className="text-sm text-muted-foreground transition-colors hover:text-primary">
-                            {link.label}
-                        </Link>
-                    </li>
-                ))}
-              </ul>
-            </div>
-            <div className="space-y-4">
-              <h4 className="font-headline font-semibold text-foreground">Légal</h4>
-              <ul className="space-y-2">
-                <li><a href="#" className="text-sm text-muted-foreground transition-colors hover:text-primary">Mentions Légales</a></li>
-                <li><a href="#" className="text-sm text-muted-foreground transition-colors hover:text-primary">Politique de confidentialité</a></li>
-              </ul>
-            </div>
-            <div className="space-y-4">
-              <h4 className="font-headline font-semibold text-foreground">Contact</h4>
-              <ul className="space-y-3">
-                <li className="flex items-center gap-2">
-                  <Mail className="h-4 w-4 shrink-0 text-primary" />
-                  <a href="mailto:contact@cabinet-paulbruveaut.site" className="text-sm text-muted-foreground transition-colors hover:text-primary">
-                    contact@cabinet-paulbruveaut.site
-                  </a>
-                </li>
-                <li className="flex items-center gap-2">
-                  <Phone className="h-4 w-4 shrink-0 text-primary" />
-                  <a href="tel:+33644684247" className="text-sm text-muted-foreground transition-colors hover:text-primary">
-                    +33 6 44 68 42 47
-                  </a>
-                </li>
-                <li className="flex items-start gap-2">
-                  <MapPin className="h-4 w-4 shrink-0 text-primary mt-1" />
-                  <address className="text-sm text-muted-foreground not-italic">
-                    89 Boulevard Saint-Michel, <br />75005 Paris, France
-                  </address>
-                </li>
-              </ul>
+
+          <div>
+            <h4 className="font-semibold text-foreground">Navigation</h4>
+            <ul className="mt-4 space-y-2">
+              <li><Link href="/" className="text-muted-foreground hover:text-primary">Accueil</Link></li>
+              <li><Link href="/services" className="text-muted-foreground hover:text-primary">Services</Link></li>
+              <li><Link href="/about" className="text-muted-foreground hover:text-primary">À Propos</Link></li>
+              <li><Link href="/contact" className="text-muted-foreground hover:text-primary">Contact</Link></li>
+              <li><Link href="/testimonials" className="text-muted-foreground hover:text-primary">Témoignages</Link></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-semibold text-foreground">Horaires d'ouverture</h4>
+            <div className="mt-4 space-y-2 text-muted-foreground">
+              <p>Lundi - Vendredi: 9h00 - 18h00</p>
+              <p>Samedi: 9h00 - 12h00 (sur RDV)</p>
+              <p>Dimanche: Fermé</p>
             </div>
           </div>
         </div>
-        <div className="mt-16 border-t border-border/40 pt-8 text-center">
-            <p className="text-xs text-muted-foreground">
-                © {new Date().getFullYear()} Bruveau Notaire. Tous droits réservés.
-            </p>
+
+        <div className="mt-12 border-t border-border pt-8 text-center text-sm text-muted-foreground">
+          <p>&copy; {new Date().getFullYear()} Cabinet Bruveau Notaire. Tous droits réservés.</p>
         </div>
       </div>
     </footer>
-  );
+  )
 }
