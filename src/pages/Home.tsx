@@ -568,7 +568,7 @@ const Home: React.FC = () => {
             >
               <div className="mb-6">
                 <img 
-                  src="https://ai-lumi-prd.oss-us-east-1.aliyuncs.com/d3/d3547f40259c0df34bb923384d4dc893.png"
+                  src="https://ai-lumi-prd.oss-us-east-1.aliyuncs.com/ee/ee096ad1415a6acf47518db7a215603c.png"
                   alt="Cabinet Maître Paul Bruveau"
                   className="h-20 w-auto mx-auto lg:mx-0 mb-4 filter drop-shadow-lg"
                 />
