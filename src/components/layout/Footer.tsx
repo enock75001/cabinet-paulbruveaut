@@ -11,7 +11,7 @@ const navLinks = [
 
 export function Footer() {
   return (
-    <footer className="bg-secondary">
+    <footer className="bg-secondary/50">
       <div className="container mx-auto px-4 py-12 sm:py-16">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div className="space-y-4">
@@ -26,7 +26,7 @@ export function Footer() {
           
           <div className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:col-span-2">
             <div className="space-y-4">
-              <h4 className="font-headline font-semibold text-primary">Navigation</h4>
+              <h4 className="font-headline font-semibold text-foreground">Navigation</h4>
               <ul className="space-y-2">
                 {navLinks.map(link => (
                     <li key={link.href}>
@@ -38,29 +38,29 @@ export function Footer() {
               </ul>
             </div>
             <div className="space-y-4">
-              <h4 className="font-headline font-semibold text-primary">Légal</h4>
+              <h4 className="font-headline font-semibold text-foreground">Légal</h4>
               <ul className="space-y-2">
                 <li><a href="#" className="text-sm text-muted-foreground transition-colors hover:text-primary">Mentions Légales</a></li>
                 <li><a href="#" className="text-sm text-muted-foreground transition-colors hover:text-primary">Politique de confidentialité</a></li>
               </ul>
             </div>
             <div className="space-y-4">
-              <h4 className="font-headline font-semibold text-primary">Contact</h4>
+              <h4 className="font-headline font-semibold text-foreground">Contact</h4>
               <ul className="space-y-3">
                 <li className="flex items-center gap-2">
-                  <Mail className="h-4 w-4 shrink-0 text-accent" />
+                  <Mail className="h-4 w-4 shrink-0 text-primary" />
                   <a href="mailto:contact@cabinet-paulbruveaut.site" className="text-sm text-muted-foreground transition-colors hover:text-primary">
                     contact@cabinet-paulbruveaut.site
                   </a>
                 </li>
                 <li className="flex items-center gap-2">
-                  <Phone className="h-4 w-4 shrink-0 text-accent" />
+                  <Phone className="h-4 w-4 shrink-0 text-primary" />
                   <a href="tel:+33644684247" className="text-sm text-muted-foreground transition-colors hover:text-primary">
                     +33 6 44 68 42 47
                   </a>
                 </li>
                 <li className="flex items-start gap-2">
-                  <MapPin className="h-4 w-4 shrink-0 text-accent mt-1" />
+                  <MapPin className="h-4 w-4 shrink-0 text-primary mt-1" />
                   <address className="text-sm text-muted-foreground not-italic">
                     89 Boulevard Saint-Michel, <br />75005 Paris, France
                   </address>
@@ -69,7 +69,7 @@ export function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-12 border-t pt-8 text-center">
+        <div className="mt-12 border-t border-border/40 pt-8 text-center">
             <p className="text-xs text-muted-foreground">
                 © {new Date().getFullYear()} Bruveau Notaire. Tous droits réservés.
             </p>
