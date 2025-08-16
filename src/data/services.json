@@ -1,0 +1,53 @@
+
+[
+  {
+    "_id": "1",
+    "serviceId": "SRV-001",
+    "title": "Vente immobilière",
+    "description": "Accompagnement complet pour la vente de votre bien immobilier : rédaction de l'avant-contrat, vérifications juridiques, signature de l'acte authentique.",
+    "category": "immobilier",
+    "price": "Sur devis selon la valeur du bien",
+    "duration": "6 à 8 semaines",
+    "isActive": true
+  },
+  {
+    "_id": "2",
+    "serviceId": "SRV-002",
+    "title": "Achat immobilier",
+    "description": "Sécurisation de votre acquisition immobilière avec vérifications approfondies, conseil juridique et rédaction de l'acte de vente.",
+    "category": "immobilier",
+    "price": "Émoluments réglementés",
+    "duration": "4 à 6 semaines",
+    "isActive": true
+  },
+  {
+    "_id": "3",
+    "serviceId": "SRV-003",
+    "title": "Testament et succession",
+    "description": "Rédaction de testaments, conseils en planification successorale et règlement de successions pour protéger vos proches.",
+    "category": "succession",
+    "price": "À partir de 150€",
+    "duration": "2 à 4 semaines",
+    "isActive": true
+  },
+  {
+    "_id": "4",
+    "serviceId": "SRV-004",
+    "title": "Contrat de mariage",
+    "description": "Rédaction de contrats de mariage adaptés à votre situation : séparation de biens, communauté universelle, participation aux acquêts.",
+    "category": "famille",
+    "price": "À partir de 300€",
+    "duration": "2 à 3 semaines",
+    "isActive": true
+  },
+  {
+    "_id": "5",
+    "serviceId": "SRV-005",
+    "title": "Création d'entreprise",
+    "description": "Accompagnement juridique pour la création de votre société : choix du statut, rédaction des statuts, formalités d'immatriculation.",
+    "category": "entreprise",
+    "price": "Sur devis selon la complexité",
+    "duration": "3 à 5 semaines",
+    "isActive": true
+  }
+]

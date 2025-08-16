@@ -1,0 +1,65 @@
+
+{
+  "name": "appointments",
+  "options": {
+    "validator": {
+      "$jsonSchema": {
+        "bsonType": "object",
+        "required": ["appointmentId", "clientName", "email", "phone", "service", "date", "status"],
+        "properties": {
+          "appointmentId": {
+            "bsonType": "string",
+            "description": "Identifiant unique du rendez-vous"
+          },
+          "clientName": {
+            "bsonType": "string",
+            "description": "Nom complet du client"
+          },
+          "email": {
+            "bsonType": "string",
+            "description": "Email du client"
+          },
+          "phone": {
+            "bsonType": "string",
+            "description": "Téléphone du client"
+          },
+          "service": {
+            "bsonType": "string",
+            "description": "Service demandé"
+          },
+          "date": {
+            "bsonType": "string",
+            "title": "datetime",
+            "description": "Date et heure du rendez-vous"
+          },
+          "message": {
+            "bsonType": "string",
+            "description": "Message du client"
+          },
+          "status": {
+            "bsonType": "string",
+            "enum": ["pending", "confirmed", "cancelled", "completed"],
+            "description": "Statut du rendez-vous"
+          },
+          "creator": {
+            "bsonType": "string",
+            "description": "Créateur du rendez-vous"
+          },
+          "createdAt": {
+            "bsonType": "string",
+            "title": "datetime",
+            "description": "Date de création ISO 8601"
+          },
+          "updatedAt": {
+            "bsonType": "string",
+            "title": "datetime",
+            "description": "Date de mise à jour ISO 8601"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "validationLevel": "moderate",
+    "validationAction": "warn"
+  }
+}

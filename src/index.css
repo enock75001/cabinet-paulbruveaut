@@ -1,0 +1,334 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Variables CSS pour le thème premium */
+:root {
+  --primary-50: #eff6ff;
+  --primary-100: #dbeafe;
+  --primary-200: #bfdbfe;
+  --primary-300: #93c5fd;
+  --primary-400: #60a5fa;
+  --primary-500: #3b82f6;
+  --primary-600: #2563eb;
+  --primary-700: #1d4ed8;
+  --primary-800: #1e40af;
+  --primary-900: #1e3a8a;
+  
+  --gold-50: #fffbeb;
+  --gold-100: #fef3c7;
+  --gold-200: #fde68a;
+  --gold-300: #fcd34d;
+  --gold-400: #fbbf24;
+  --gold-500: #f59e0b;
+  --gold-600: #d97706;
+  --gold-700: #b45309;
+  --gold-800: #92400e;
+  --gold-900: #78350f;
+}
+
+/* Reset et base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: #1f2937;
+  background-color: #ffffff;
+}
+
+/* Typographie premium */
+.font-serif {
+  font-family: 'Playfair Display', 'Georgia', serif;
+}
+
+.font-elegant {
+  font-family: 'Crimson Text', 'Georgia', serif;
+}
+
+/* Gradients de texte premium */
+.text-gradient-primary {
+  background: linear-gradient(135deg, var(--primary-600), var(--primary-800));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, var(--gold-500), var(--gold-700));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-light {
+  background: linear-gradient(135deg, #ffffff, #e5e7eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Ombres premium */
+.shadow-luxury {
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06),
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.shadow-glow-blue {
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06),
+    0 20px 25px -5px rgba(37, 99, 235, 0.2),
+    0 10px 10px -5px rgba(37, 99, 235, 0.1);
+}
+
+.shadow-glow-gold {
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06),
+    0 20px 25px -5px rgba(245, 158, 11, 0.2),
+    0 10px 10px -5px rgba(245, 158, 11, 0.1);
+}
+
+/* Boutons premium */
+.btn-premium {
+  @apply bg-gradient-to-r from-primary-600 to-primary-700 text-white px-6 py-3 rounded-xl font-semibold shadow-luxury hover:shadow-glow-blue transition-all duration-500 transform hover:-translate-y-0.5 hover:scale-105;
+}
+
+.btn-premium:hover {
+  background: linear-gradient(135deg, var(--primary-700), var(--primary-800));
+}
+
+.btn-secondary {
+  @apply bg-white text-primary-700 border-2 border-primary-200 px-6 py-3 rounded-xl font-semibold hover:bg-primary-50 hover:border-primary-300 transition-all duration-300 shadow-sm hover:shadow-md;
+}
+
+.btn-gold {
+  @apply bg-gradient-to-r from-gold-500 to-gold-600 text-white px-6 py-3 rounded-xl font-semibold shadow-luxury hover:shadow-glow-gold transition-all duration-500 transform hover:-translate-y-0.5;
+}
+
+/* Animations personnalisées */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes glow {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+}
+
+/* Effets glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-dark {
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Styles pour le logo */
+.logo-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.logo-container::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transform: rotate(45deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.logo-container:hover::before {
+  animation: shimmer 1.5s ease-in-out;
+  opacity: 1;
+}
+
+/* Améliorations pour les cartes */
+.card-premium {
+  @apply bg-white rounded-2xl p-8 shadow-luxury hover:shadow-glow-blue transition-all duration-500 border border-neutral-100 hover:border-primary-200 transform hover:-translate-y-2;
+}
+
+.card-premium::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-600), var(--gold-500), var(--primary-600));
+  border-radius: 1rem 1rem 0 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card-premium:hover::before {
+  opacity: 1;
+}
+
+/* Effets de survol pour les liens */
+.link-elegant {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.link-elegant::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary-600), var(--gold-500));
+  transition: width 0.3s ease;
+}
+
+.link-elegant:hover::after {
+  width: 100%;
+}
+
+/* Scrollbar personnalisée */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--primary-500), var(--primary-700));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--primary-600), var(--primary-800));
+}
+
+/* Sélection de texte */
+::selection {
+  background: var(--primary-200);
+  color: var(--primary-800);
+}
+
+::-moz-selection {
+  background: var(--primary-200);
+  color: var(--primary-800);
+}
+
+/* Responsive améliorations */
+@media (max-width: 768px) {
+  .text-gradient-primary,
+  .text-gradient-gold,
+  .text-gradient-light {
+    background: none;
+    -webkit-text-fill-color: inherit;
+    color: inherit;
+  }
+}
+
+/* Optimisations pour les performances */
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-opacity {
+  will-change: opacity;
+}
+
+/* Focus states accessibles */
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-white;
+}
+
+/* Animations d'entrée */
+.slide-in-bottom {
+  animation: slideInBottom 0.8s ease-out;
+}
+
+@keyframes slideInBottom {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* États de chargement */
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}

@@ -1,0 +1,60 @@
+
+{
+  "name": "services",
+  "options": {
+    "validator": {
+      "$jsonSchema": {
+        "bsonType": "object",
+        "required": ["serviceId", "title", "description", "category", "isActive"],
+        "properties": {
+          "serviceId": {
+            "bsonType": "string",
+            "description": "Identifiant unique du service"
+          },
+          "title": {
+            "bsonType": "string",
+            "description": "Titre du service notarial"
+          },
+          "description": {
+            "bsonType": "string",
+            "description": "Description détaillée du service"
+          },
+          "category": {
+            "bsonType": "string",
+            "enum": ["immobilier", "famille", "entreprise", "succession", "autre"],
+            "description": "Catégorie du service"
+          },
+          "price": {
+            "bsonType": "string",
+            "description": "Information tarifaire"
+          },
+          "duration": {
+            "bsonType": "string",
+            "description": "Durée estimée"
+          },
+          "isActive": {
+            "bsonType": "bool",
+            "description": "Service disponible"
+          },
+          "creator": {
+            "bsonType": "string",
+            "description": "Créateur du service"
+          },
+          "createdAt": {
+            "bsonType": "string",
+            "title": "datetime",
+            "description": "Date de création ISO 8601"
+          },
+          "updatedAt": {
+            "bsonType": "string",
+            "title": "datetime",
+            "description": "Date de mise à jour ISO 8601"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "validationLevel": "moderate",
+    "validationAction": "warn"
+  }
+}
