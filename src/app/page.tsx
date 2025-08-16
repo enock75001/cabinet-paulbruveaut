@@ -4,6 +4,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Scale, Users, Briefcase, ChevronRight, Star } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { testimonials } from "@/lib/testimonials";
 
 const services = [
   {
@@ -20,27 +21,6 @@ const services = [
     icon: <Briefcase className="h-10 w-10 text-primary" />,
     title: "Droit des Sociétés",
     description: "Création de sociétés, fusions, acquisitions, secrétariat juridique.",
-  },
-];
-
-const testimonials = [
-  {
-    name: "Alexandre P.",
-    role: "Entrepreneur",
-    avatar: "AP",
-    text: "Une expertise et une réactivité hors pair pour la création de notre société. Maître Bruveau a su nous guider à chaque étape avec clarté et professionnalisme.",
-  },
-  {
-    name: "Marie & Jean D.",
-    role: "Acquéreurs immobiliers",
-    avatar: "MD",
-    text: "L'accompagnement pour notre premier achat a été exceptionnel. Nous nous sommes sentis en totale confiance. Un grand merci pour votre patience et vos conseils avisés.",
-  },
-  {
-    name: "Sophie L.",
-    role: "Héritière",
-    avatar: "SL",
-    text: "La gestion de la succession a été menée avec beaucoup de tact et d'efficacité dans un moment difficile. Je recommande vivement le cabinet.",
   },
 ];
 
@@ -129,7 +109,7 @@ export default function Home() {
             <p className="mt-4 text-lg text-muted-foreground">La satisfaction de nos clients est notre plus grande fierté.</p>
           </div>
           <div className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-3">
-            {testimonials.map((testimonial) => (
+            {testimonials.slice(0, 3).map((testimonial) => (
               <Card key={testimonial.name} className="flex flex-col bg-background/50 border-transparent">
                 <CardHeader className="flex-row items-center gap-4 pb-4">
                   <Avatar>
@@ -150,6 +130,11 @@ export default function Home() {
               </Card>
             ))}
           </div>
+           <div className="mt-16 text-center">
+                <Button asChild size="lg">
+                    <Link href="/testimonials">Voir plus de témoignages</Link>
+                </Button>
+            </div>
         </div>
       </section>
     </div>
