@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle, Scale, Users, Briefcase, Landmark } from "lucide-react";
+import { Check, Scale, Users, Briefcase, Landmark } from "lucide-react";
 import type { ReactNode } from "react";
 
 type Service = {
@@ -11,7 +11,7 @@ type Service = {
 
 const servicesList: Service[] = [
   {
-    icon: <Scale className="h-8 w-8 text-accent" />,
+    icon: <Scale className="h-8 w-8" />,
     title: "Droit Immobilier",
     description: "Sécurisez chaque étape de vos projets immobiliers, de l'acquisition à la gestion.",
     features: [
@@ -23,7 +23,7 @@ const servicesList: Service[] = [
     ],
   },
   {
-    icon: <Users className="h-8 w-8 text-accent" />,
+    icon: <Users className="h-8 w-8" />,
     title: "Droit de la Famille",
     description: "Anticipez et protégez l'avenir de votre famille et de votre patrimoine.",
     features: [
@@ -35,7 +35,7 @@ const servicesList: Service[] = [
     ],
   },
   {
-    icon: <Briefcase className="h-8 w-8 text-accent" />,
+    icon: <Briefcase className="h-8 w-8" />,
     title: "Droit des Sociétés",
     description: "Accompagnez la vie de votre entreprise, de sa naissance à sa transmission.",
     features: [
@@ -48,7 +48,7 @@ const servicesList: Service[] = [
     ],
   },
   {
-    icon: <Landmark className="h-8 w-8 text-accent" />,
+    icon: <Landmark className="h-8 w-8" />,
     title: "Gestion de Patrimoine",
     description: "Optimisez, structurez et pérennisez votre patrimoine personnel et professionnel.",
     features: [
@@ -64,7 +64,7 @@ const servicesList: Service[] = [
 export default function ServicesPage() {
   return (
     <>
-      <section className="bg-secondary py-20">
+      <section className="bg-secondary/50 py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="font-headline text-4xl font-bold text-primary sm:text-5xl">
             Nos Domaines d'Expertise
@@ -79,21 +79,23 @@ export default function ServicesPage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:gap-12">
             {servicesList.map((service) => (
-              <Card key={service.title} className="flex flex-col overflow-hidden border-2 border-transparent bg-background/50 transition-all duration-300 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20">
-                <CardHeader className="flex flex-row items-center gap-4 bg-secondary/50 p-6">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
-                    {service.icon}
-                  </div>
-                  <div>
-                    <CardTitle className="font-headline text-2xl text-primary">{service.title}</CardTitle>
-                    <p className="text-muted-foreground">{service.description}</p>
-                  </div>
+              <Card key={service.title} className="flex flex-col overflow-hidden bg-card border transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                <CardHeader className="p-6">
+                    <div className="flex items-center gap-4">
+                        <div className="flex h-16 w-16 items-center justify-center rounded-lg bg-primary text-primary-foreground">
+                            {service.icon}
+                        </div>
+                        <div>
+                            <CardTitle className="font-headline text-2xl text-foreground">{service.title}</CardTitle>
+                        </div>
+                    </div>
+                     <p className="text-muted-foreground pt-4">{service.description}</p>
                 </CardHeader>
-                <CardContent className="flex-grow p-6">
+                <CardContent className="flex-grow p-6 pt-0">
                   <ul className="space-y-3">
                     {service.features.map((feature, index) => (
                       <li key={index} className="flex items-start gap-3">
-                        <CheckCircle className="mt-1 h-5 w-5 flex-shrink-0 text-accent" />
+                        <Check className="mt-1 h-5 w-5 flex-shrink-0 text-primary" />
                         <span className="text-foreground/90">{feature}</span>
                       </li>
                     ))}

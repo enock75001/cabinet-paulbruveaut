@@ -11,9 +11,9 @@ const navLinks = [
 
 export function Footer() {
   return (
-    <footer className="bg-secondary/50">
-      <div className="container mx-auto px-4 py-12 sm:py-16">
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+    <footer className="bg-secondary/50 border-t">
+      <div className="container mx-auto px-4 py-16">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-3">
           <div className="space-y-4">
             <Logo />
             <p className="max-w-xs text-sm text-muted-foreground">
@@ -69,7 +69,7 @@ export function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-12 border-t border-border/40 pt-8 text-center">
+        <div className="mt-16 border-t border-border/40 pt-8 text-center">
             <p className="text-xs text-muted-foreground">
                 © {new Date().getFullYear()} Bruveau Notaire. Tous droits réservés.
             </p>

@@ -37,7 +37,7 @@ export default function ContactPage() {
 
   return (
     <>
-      <section className="bg-secondary py-20">
+      <section className="bg-secondary/50 py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="font-headline text-4xl font-bold text-primary sm:text-5xl">
             Nous Contacter
@@ -54,20 +54,20 @@ export default function ContactPage() {
             <h2 className="font-headline text-3xl font-bold text-primary">Informations de contact</h2>
             <div className="space-y-4 text-lg">
               <p className="flex items-center gap-4">
-                <Mail className="h-6 w-6 text-accent" />
-                <a href="mailto:contact@cabinet-paulbruveaut.site" className="hover:text-primary">
+                <Mail className="h-6 w-6 text-primary" />
+                <a href="mailto:contact@cabinet-paulbruveaut.site" className="hover:text-primary/80 text-muted-foreground">
                   contact@cabinet-paulbruveaut.site
                 </a>
               </p>
               <p className="flex items-center gap-4">
-                <Phone className="h-6 w-6 text-accent" />
-                <a href="tel:+33644684247" className="hover:text-primary">
+                <Phone className="h-6 w-6 text-primary" />
+                <a href="tel:+33644684247" className="hover:text-primary/80 text-muted-foreground">
                   +33 6 44 68 42 47
                 </a>
               </p>
               <div className="flex items-start gap-4">
-                <MapPin className="h-6 w-6 flex-shrink-0 text-accent" />
-                <address className="not-italic">
+                <MapPin className="h-6 w-6 flex-shrink-0 text-primary" />
+                <address className="not-italic text-muted-foreground">
                   89 Boulevard Saint-Michel,
                   <br />
                   75005 Paris, France
@@ -78,7 +78,7 @@ export default function ContactPage() {
                 En collaboration avec Maître COUZIGOU-SUHAS Nathalie.
             </p>
             <div className="pt-6">
-                 <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+                 <Button asChild size="lg">
                     <a href="https://calendly.com" target="_blank" rel="noopener noreferrer">
                         <Calendar className="mr-2 h-5 w-5" />
                         Planifier un rendez-vous
@@ -94,7 +94,7 @@ export default function ContactPage() {
             </div>
           </div>
           
-          <Card>
+          <Card className="border shadow-lg">
             <CardHeader>
               <CardTitle className="font-headline text-2xl">Envoyez-nous un message</CardTitle>
               <CardDescription>Nous vous répondrons dans les plus brefs délais.</CardDescription>
