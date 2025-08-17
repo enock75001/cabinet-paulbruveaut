@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { Calendar, Clock, User, Phone, Mail, MessageSquare, CheckCircle } from 'lucide-react'
 import { motion } from 'framer-motion'
 import toast from 'react-hot-toast'
+import { lumi } from '../lib/lumi'
 
 const Appointments: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -44,7 +45,6 @@ const Appointments: React.FC = () => {
     setIsSubmitting(true)
 
     try {
-      // Simulation de création du rendez-vous
       const appointmentData = {
         appointmentId: `RDV-${Date.now()}`,
         clientName: formData.clientName,
@@ -59,21 +59,26 @@ const Appointments: React.FC = () => {
         updatedAt: new Date().toISOString()
       }
 
-      // Simulation d'envoi à MongoDB
-      await new Promise(resolve => setTimeout(resolve, 1500))
-      
-      toast.success('Votre demande de rendez-vous a été envoyée ! Nous vous confirmerons la date dans les plus brefs délais.')
-      
-      setFormData({
-        clientName: '',
-        email: '',
-        phone: '',
-        service: '',
-        date: '',
-        time: '',
-        message: ''
-      })
+      // Remplacer la simulation par l'appel à l'API Lumi
+      const result = await lumi.from("appointments").create(appointmentData);
+
+      if (result.acknowledged) {
+        toast.success('Votre demande de rendez-vous a été envoyée ! Nous vous confirmerons la date dans les plus brefs délais.')
+        setFormData({
+          clientName: '',
+          email: '',
+          phone: '',
+          service: '',
+          date: '',
+          time: '',
+          message: ''
+        })
+      } else {
+        throw new Error('La création du rendez-vous a échoué.');
+      }
+
     } catch (error) {
+      console.error("Erreur lors de la création du rendez-vous:", error);
       toast.error('Une erreur est survenue. Veuillez réessayer.')
     } finally {
       setIsSubmitting(false)
@@ -441,3 +446,5 @@ const Appointments: React.FC = () => {
 }
 
 export default Appointments
+
+    
